@@ -1,0 +1,35 @@
+for sending email, SMTP(Simpl Mail Transfer Protocol) is used.
+
+in Consumers, SendEmailConsimer
+     @KafkaListener(topics="sendEmail", groupId = "emailService")
+     annotation is put on listener function.
+     groupId is to identify all the instances of this listener function across many servers.
+     i.e. we dont want all of them to send email.
+
+
+https://www.digitalocean.com/community/tutorials/javamail-example-send-mail-in-java-smtp
+
+
+copy 1 dependency
+copy util file
+then, create 1 email id and configure it (password should be generated in google account app passwords section.)
+
+
+download kafka
+start zookeeper
+    ~/kafka_2.13-3.0.0/bin/zookeeper-server-start.sh ~/kafka_2.13-3.0.0/config/zookeeper.properties
+start kafka
+    ~/kafka_2.13-3.0.0/bin/kafka-server-start.sh ~/kafka_2.13-3.0.0/config/server.properties
+
+
+
+
+
+
+
+
+
+
+
+
+
